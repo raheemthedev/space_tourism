@@ -1,0 +1,1435 @@
+@font-face {
+  font-family: Bellefair;
+  src: url(../fonts/Bellefair-Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
+:root {
+  --unit: 10px;
+  --span-xl: calc(var(--unit) * 5);
+  --span-l: calc(var(--unit) * 4);
+  --borderBottomWidth: 2px;
+  --paddingBottomWidth: 40px;
+  --horPaddingBottomWidth: calc(
+    var(paddingBottomWidth) - var(var(--borderBottomWidth))
+  );
+}
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.0000001s;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+  color: white;
+  background-image: url(../home/background-home-desktop.jpg);
+  background-size: cover;
+  background-position: 50% center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  transition: 0.3s;
+}
+
+.destBody {
+  background-image: url(../destination/background-destination-desktop.jpg);
+}
+.container {
+  padding-left: calc(var(--span-xl) + 5px);
+  padding-top: var(--span-l);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.rel {
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Bellefair, sans-serif;
+}
+
+li,
+a {
+  font-family: Bellefair, sans-serif;
+}
+
+nav {
+  justify-content: space-between;
+}
+
+.horMenu {
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(80px);
+  padding: 35px 100px 35px 40px;
+}
+
+.horMenu li {
+  padding-inline: 30px;
+}
+
+.horMenu li a {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  transition: 0.05s;
+  padding-bottom: 34px;
+  border-bottom: 0px;
+}
+
+.horMenu li a:hover,
+.horMenu li a:focus,
+.horMenu li a:active {
+  border-bottom: 2px solid white;
+  padding-top: 2px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  position: relative;
+  z-index: 2;
+  background: white;
+}
+
+main {
+  padding-block-start: 120px;
+  padding-inline: 100px 140px;
+}
+
+.mainTxt {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainpOne {
+  font-family: "Bellefair", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.mainH {
+  font-size: 8rem;
+  text-transform: uppercase;
+}
+
+.mainpTwo {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.3rem;
+  width: 70%;
+  line-height: 32px;
+}
+
+.exploreDiv a {
+  border-radius: 50%;
+}
+
+.exploreDiv a {
+  color: black;
+  font-size: 2rem;
+  padding: 100px 55px;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.backDrop {
+  position: absolute;
+  border-radius: 50%;
+  height: 240px;
+  width: 240px;
+  top: -101px;
+  left: 3px;
+  z-index: -7;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.exploreDiv:hover .backDrop {
+  transform: scale(1.5);
+  opacity: 0.2;
+}
+
+.exploreDiv:focus .backDrop {
+  transform: scale(1.5);
+  opacity: 0.2;
+}
+
+.exploreDiv:active .backDrop {
+  transform: scale(1.5);
+  opacity: 0.2;
+}
+
+/* Destination.html style */
+.mainDest {
+  padding-block-start: 60px;
+}
+
+.mainpOne .black {
+  color: rgb(83, 83, 83);
+  font-weight: bold;
+}
+
+.mainDest {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mainDestTxt {
+  flex-direction: column;
+  align-items: start;
+  padding-inline-start: 130px;
+  gap: 20px;
+}
+
+.mainDestTxtUl,
+.crewUl {
+  justify-content: stretch;
+  width: 100%;
+}
+
+.mainDestList {
+  padding-inline-end: 30px;
+}
+
+.mainDestList a,
+.crew a {
+  font-family: "Bellefair", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #d0d6f9;
+}
+
+.mainDestList a:hover,
+.mainDestList a:active,
+.mainDestList a:focus,
+.crew a:hover,
+.crew a:active,
+.crew a:focus {
+  border-bottom: 2px solid white;
+  padding-top: 2px;
+}
+
+.mainDestTxt p:not(.see, .avgDist p, .trav p) {
+  font-family: "Bellefair", sans-serif;
+  font-size: 7rem;
+  text-transform: uppercase;
+}
+
+.empt {
+  width: 88%;
+  background-color: rgb(56 59 75);
+  margin-block: 10px;
+  padding-block: 0.1px;
+}
+
+.see {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 90%;
+  font-size: 1.1rem;
+  line-height: 30px;
+  color: #d0d6f9;
+}
+
+.traDist {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.avgDist,
+.trav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.firstFooterP {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+
+.secondFooterP {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.mainDest {
+  padding-bottom: 25px;
+}
+
+/* crew style */
+.crewUl {
+  gap: 20px;
+}
+
+.crewDiv {
+  padding-inline-start: 0;
+}
+
+.crewDiv #destTit {
+  font-size: 3rem;
+}
+
+.crewMates {
+  width: 50%;
+  align-self: flex-end;
+}
+
+.crewOuter {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.crewMain,
+.crewMainII {
+  padding-bottom: 0;
+}
+
+.crewBio {
+  width: 80%;
+}
+
+#role {
+  color: #d0d6f9;
+  font-family: "Bellefair", sans-serif;
+  font-size: 1.7rem;
+}
+
+.crewDiv #destTit {
+  width: 90%;
+}
+
+/* Technologies */
+.techDiv {
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+}
+
+.tech {
+  flex-direction: column;
+  gap: 60px;
+}
+
+.tech li a {
+  border: 2px solid white;
+  padding: 16px 25px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: 0.2s;
+}
+
+.tech li a:hover,
+.tech li a:focus,
+.tech li a:active {
+  background-color: white;
+  color: black;
+}
+
+#term {
+  font-size: 1.2rem;
+}
+
+#descLaunch {
+  font-size: 3rem;
+}
+
+.termImg {
+  width: 30%;
+}
+
+.techDivTxt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offScreen {
+  display: none;
+}
+
+.backdrop {
+  display: none;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+.dispNone {
+  display: none;
+}
+/* media queries */
+/* Large Devices */
+@media (max-width: 1100px) {
+  .crewMates {
+    width: 40%;
+  }
+
+  .techMainII {
+    padding-block-end: 60px;
+    gap: 70px;
+  }
+
+  .crewBio {
+    padding-block-end: 30px;
+  }
+
+  .mainDestTxt {
+    padding-inline-start: 60px;
+  }
+
+  .planet {
+    width: 50%;
+  }
+
+  .secondFooterP {
+    font-size: 1.4rem;
+  }
+
+  .firstFooterP {
+    font-size: .8rem;
+  }
+
+  .crewDiv {
+    padding-inline-start: 0;
+  }
+
+  .mainpTwo {
+    width: 90%;
+  }
+
+  main {
+    padding-inline: 70px;
+  }
+
+  .exploreDiv a {
+    font-size: 1.2rem;
+  }
+
+  .exploreDiv a {
+    color: black;
+    font-size: 1.4rem;
+    padding: 100px 70px;
+  }
+  
+  .backDrop {
+    height: 230px;
+    width: 230px;
+  }
+
+  .horMenu {
+    gap: 20px;
+    padding-inline-end: 40px;
+  }
+
+  .horMenu li {
+    padding-inline: 10px;
+  }
+
+  .horMenu li a {
+    letter-spacing: 2px;
+  }
+
+  #destTit {
+    font-size: 5.2rem;
+  }
+
+  .mainDestList {
+    padding-inline-end: 20px;
+  }
+
+  .see {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .mainpOne {
+    font-size: 1.2rem;
+  }
+
+  .mainH {
+    font-size: 6.6rem;
+  }
+
+  .mainpTwo {
+    font-size: 1.3rem;
+  }
+
+  .mainTxt {
+    gap: 10px;
+    padding-inline-end: 20px;
+  }
+  
+  .horMenu li {
+    padding-inline: 0;
+  }
+
+  .horMenu li a {
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .mainH {
+    font-size: 5rem;
+  }
+
+  .mainpOne {
+    font-size: 1rem;
+  }
+  
+  .mainTxt {
+    padding-inline-end: 0;
+  }
+
+  .lineHor {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    z-index: 500;
+  }
+
+  .hamBar {
+    width: 70%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 300ms ease;
+  }
+
+  .barTop {
+    top: 30%;
+  }
+
+  .barBottom {
+    top: 70%;
+  }
+
+  .hamburgerMenu.active .hamBar {
+    /* background-color: rgb(0, 0, 0); */
+  }
+
+  .hamburgerMenu.active .barTop {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+  }
+
+  .hamburgerMenu.active .barMid {
+    opacity: 0;
+  }
+
+  .hamburgerMenu.active .barBottom {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+  }
+
+  .offScreen {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    transition: right 300ms;
+    color: black;
+    z-index: 50;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
+  .offScreen.active {
+    right: 0;
+    backdrop-filter: blur(80px);
+  }
+
+  .offScreen ul {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding-block-start: 40px;
+  }
+
+  .offScreen ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: 0.05s;
+  }
+
+  .offScreenUl li a:hover,
+  .offScreenUl li a:focus,
+  .offScreenUl li a:active {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
+  }
+
+  .exploreDiv a {
+    color: black;
+    font-size: 1.2rem;
+    padding: 60px 35px;
+    background-color: white;
+    text-transform: uppercase;
+  }
+
+  .backDrop {
+    position: absolute;
+    border-radius: 50%;
+    height: 147px;
+    width: 152px;
+    top: -63px;
+    left: 0;
+    z-index: -7;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+  }
+
+  .exploreDiv:hover .backDrop {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  .exploreDiv:focus .backDrop {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  .exploreDiv:active .backDrop {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  .hidflow {
+    overflow-y: hidden;
+  }
+
+  nav {
+    padding-inline-end: 40px;
+  }
+
+  main {
+    padding: 120px 0;
+  }
+
+  .mainpTwo {
+    font-size: 1rem;
+    width: 70%;
+  }
+
+  #indexMain {
+    width: 90%; 
+    margin: auto;  
+  }
+
+  .planet {
+    width: 35%;
+  }
+
+  .see {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  .empt {
+    width: 80%;
+  }
+
+  .crewMates {
+    width: 35%;
+    align-self: flex-end;
+    padding-right: 50px;
+  }
+
+  .crewDiv #destTit {
+    font-size: 2rem;
+  }
+
+  #role {
+    font-size: 1.2rem;
+  }
+
+  .termImg {
+    padding-right: 50px;
+  }
+
+  .techDiv {
+    gap: 30px;
+  }
+
+  .descLaunchTxt {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  #descLaunch {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: url(../home/background-home-mobile.jpg);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+
+  nav {
+    padding-inline-end: 0;
+  }
+
+  .container {
+    padding: 0;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+  }
+
+  .mainTxt {
+    text-align: center;
+  }
+
+  .mainpTwo {
+    width: 100%;
+  }
+
+  #indexMain {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    padding: 0;
+    padding-block: 70px 150px;
+  }
+
+  .mainTxt {
+    gap: 0px;
+  }
+
+  .mainpOne {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .mainH {
+    font-size: 5rem;
+  }
+
+  .mainpTwo {
+    font-size: 1rem;
+  }
+
+  .lineHor {
+    display: none;
+  }
+
+  nav {
+    padding-block-start: 40px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 10%;
+  }
+
+  .hamburgerMenu {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    z-index: 500;
+  }
+
+  .hamBar {
+    width: 70%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 300ms ease;
+  }
+
+  .barTop {
+    top: 30%;
+  }
+
+  .barBottom {
+    top: 70%;
+  }
+
+  .hamburgerMenu.active .hamBar {
+    /* background-color: rgb(0, 0, 0); */
+  }
+
+  .hamburgerMenu.active .barTop {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+  }
+
+  .hamburgerMenu.active .barMid {
+    opacity: 0;
+  }
+
+  .hamburgerMenu.active .barBottom {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+  }
+
+  .offScreen {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    transition: right 300ms;
+    color: black;
+    z-index: 50;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
+  .offScreen.active {
+    right: 0;
+    backdrop-filter: blur(80px);
+  }
+
+  .offScreen ul {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding-block-start: 40px;
+  }
+
+  .offScreen ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: 0.05s;
+  }
+
+  .offScreenUl li a:hover,
+  .offScreenUl li a:focus,
+  .offScreenUl li a:active {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
+  }
+
+  .exploreDiv a {
+    color: black;
+    font-size: 1.2rem;
+    padding: 60px 35px;
+    background-color: white;
+    text-transform: uppercase;
+  }
+
+  .backDrop {
+    position: absolute;
+    border-radius: 50%;
+    height: 147px;
+    width: 152px;
+    top: -63px;
+    left: 0;
+    z-index: -7;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+  }
+
+  .exploreDiv:hover .backDrop {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  .exploreDiv:focus .backDrop {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  .exploreDiv:active .backDrop {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  .hidflow {
+    overflow-y: hidden;
+  }
+
+  .mainDest {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 50px 0 0 0;
+  }
+
+  .planet {
+    width: 70%;
+  }
+
+  .mainDestTxt {
+    padding: 0;
+    text-align: center;
+    gap: 30px;
+  }
+
+  #destTit {
+    font-size: 3rem;
+    margin: auto;
+  }
+
+  .mainDestTxtUl {
+    place-content: center;
+    padding-block: 10px;
+    gap: 10px;
+  }
+
+  .mainDestList {
+    padding-inline-end: unset;
+  }
+
+  .mainDestList a {
+    font-size: 1.1rem;
+  }
+
+  .see {
+    margin: auto;
+    font-size: 1rem;
+  }
+
+  .firstFooterP {
+    font-size: 0.7rem;
+  }
+
+  .secondFooterP {
+    font-size: 1.3rem;
+  }
+
+  .crewMainII {
+    align-items: center;
+    place-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .crewMates {
+    margin: auto;
+    width: 90%;
+  }
+
+  .crewUl,
+  .crewUl li,
+  .crewUl li a {
+    display: inline-flex;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .crewUl {
+    gap: 10px;
+    place-content: center;
+  }
+
+  .crewUl li {
+    padding: 0;
+  }
+
+  #role {
+    text-align: center;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .crewBio {
+    margin: auto;
+    width: 100%;
+  }
+
+  .crewDiv #destTit {
+    font-size: 1.6rem;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  .traDist {
+    padding-bottom: 30px;
+  }
+
+  .empt {
+    width: 100%;
+  }
+
+  .techDiv {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  ul.tech {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .tech li a {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+
+  #descLaunch {
+    font-size: 2rem;
+  }
+
+  .descLaunchTxt {
+    font-size: 1rem;
+  }
+
+  .dispNone {
+    display: block;
+    width: 100%;
+  }
+
+  .dispBlock {
+    display: none;
+  }
+
+  .techMainII {
+    padding-block-end: 55px;
+  }
+
+  .mainDestList a,
+  .crew a {
+    font-size: 1rem;
+  }
+
+  .crewMates {
+    width: 40%;
+  }
+
+  .termImg {
+    padding: 0;
+  }
+}
+/* Small mobile phones 300 - 400px */
+@media (max-width: 400px) {
+  body {
+    background-image: url(../home/background-home-mobile.jpg);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+
+  nav {
+    padding-inline-end: 0;
+  }
+
+  .container {
+    padding: 0;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+  }
+
+  .mainTxt {
+    text-align: center;
+  }
+
+  .mainpTwo {
+    width: 100%;
+  }
+
+  #indexMain {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    padding: 0;
+    padding-block: 70px 150px;
+  }
+
+  .mainTxt {
+    gap: 0px;
+  }
+
+  .mainpOne {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .mainH {
+    font-size: 5rem;
+  }
+
+  .mainpTwo {
+    font-size: 1rem;
+  }
+
+  .lineHor {
+    display: none;
+  }
+
+  nav {
+    padding-block-start: 20px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 12%;
+  }
+
+  .hamburgerMenu {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    z-index: 500;
+  }
+
+  .hamBar {
+    width: 70%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 300ms ease;
+  }
+
+  .barTop {
+    top: 30%;
+  }
+
+  .barBottom {
+    top: 70%;
+  }
+
+  .hamburgerMenu.active .hamBar {
+    /* background-color: rgb(0, 0, 0); */
+  }
+
+  .hamburgerMenu.active .barTop {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+  }
+
+  .hamburgerMenu.active .barMid {
+    opacity: 0;
+  }
+
+  .hamburgerMenu.active .barBottom {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+  }
+
+  .offScreen {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    transition: right 300ms;
+    color: black;
+    z-index: 50;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
+  .offScreen.active {
+    right: 0;
+    backdrop-filter: blur(80px);
+  }
+
+  .offScreen ul {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding-block-start: 40px;
+  }
+
+  .offScreen ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: 0.05s;
+  }
+
+  .offScreenUl li a:hover,
+  .offScreenUl li a:focus,
+  .offScreenUl li a:active {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
+  }
+
+  .exploreDiv a {
+    color: black;
+    font-size: 1.2rem;
+    padding: 60px 35px;
+    background-color: white;
+    text-transform: uppercase;
+  }
+
+  .backDrop {
+    position: absolute;
+    border-radius: 50%;
+    height: 147px;
+    width: 152px;
+    top: -63px;
+    left: 0;
+    z-index: -7;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+  }
+
+  .exploreDiv:hover .backDrop {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  .exploreDiv:focus .backDrop {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  .exploreDiv:active .backDrop {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  .hidflow {
+    overflow-y: hidden;
+  }
+
+  .mainDest {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 50px 0 0 0;
+  }
+
+  .planet {
+    width: 70%;
+  }
+
+  .mainDestTxt {
+    padding: 0;
+    text-align: center;
+    gap: 30px;
+  }
+
+  #destTit {
+    font-size: 3rem;
+    margin: auto;
+  }
+
+  .mainDestTxtUl {
+    place-content: center;
+    padding-block: 10px;
+    gap: 10px;
+  }
+
+  .mainDestList {
+    padding-inline-end: unset;
+  }
+
+  .mainDestList a {
+    font-size: 1.1rem;
+  }
+
+  .see {
+    margin: auto;
+    font-size: 1rem;
+  }
+
+  .firstFooterP {
+    font-size: 0.7rem;
+  }
+
+  .secondFooterP {
+    font-size: 1.3rem;
+  }
+
+  .crewMainII {
+    align-items: center;
+    place-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .crewMates {
+    margin: auto;
+    width: 90%;
+  }
+
+  .crewUl,
+  .crewUl li,
+  .crewUl li a {
+    display: inline-flex;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .crewUl {
+    gap: 10px;
+    place-content: center;
+  }
+
+  .crewUl li {
+    padding: 0;
+  }
+
+  #role {
+    text-align: center;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .crewBio {
+    margin: auto;
+    width: 100%;
+  }
+
+  .crewDiv #destTit {
+    font-size: 1.6rem;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  .traDist {
+    padding-bottom: 30px;
+  }
+
+  .empt {
+    width: 100%;
+  }
+
+  .techDiv {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  ul.tech {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .tech li a {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+
+  #descLaunch {
+    font-size: 2rem;
+  }
+
+  .descLaunchTxt {
+    font-size: 1rem;
+  }
+
+  .dispNone {
+    display: block;
+    width: 100%;
+  }
+
+  .dispBlock {
+    display: none;
+  }
+
+  .techMainII {
+    padding-block-end: 55px;
+  }
+
+  .mainDestList a,
+  .crew a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .firstFooterP {
+    font-size: 0.6rem;
+  }
+
+  .secondFooterP {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extremely small phones */
+@media (max-width: 230px) {
+  body {
+    display: none;
+  }
+}
